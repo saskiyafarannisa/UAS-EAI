@@ -24,7 +24,7 @@ use App\Http\Controllers\PelaporanController;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
-
+Route::prefix('/apoteker')->group(function () {
 Route::get('/obat', [ObatController::class, 'index']);
 Route::post('/obat', [ObatController::class, 'store']);
 
@@ -38,3 +38,5 @@ Route::get('/konsul/{id_pasien}', [KonsultasiController::class, 'show']);
 
 Route::get('/reporting', [PelaporanController::class, 'index']);
 Route::post('/reporting', [PelaporanController::class, 'store']);
+
+});
