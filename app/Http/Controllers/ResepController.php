@@ -26,7 +26,6 @@ class ResepController extends Controller
         $validator = Validator::make($request -> all(), [
             'nama_dokter' => 'string|required',
             'id_pasien' => 'integer|required',
-            'id_pembayaran' => 'integer|required',
             'tanggal_resep' => 'date|required',
             'resep' => 'string|required',
         ]);
@@ -36,7 +35,11 @@ class ResepController extends Controller
                 'message' => 'gagal, ada kesalahan input'
             ]);
         }else{
-            $resep = Resep::create($request -> all());
+            if (Resep::exists()){
+                $resep = Resep::updateOrCreate($request -> all());
+            }else{
+                $resep = Resep::create($request -> all());
+            }
             return response() -> json([
                 'status' => 200,
                 'message' => 'berhasil',

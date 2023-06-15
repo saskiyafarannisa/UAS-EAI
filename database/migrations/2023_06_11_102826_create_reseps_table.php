@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id('id_resep');
             $table->string('nama_dokter');
             $table->integer('id_pasien');
-            $table->integer('id_pembayaran');
+            $table->integer('id_pembayaran')->nullable();
             $table->date('tanggal_resep');
             $table->string('resep');
         });
