@@ -30,7 +30,7 @@ Route::prefix('/apoteker')->group(function () {
 Route::get('/obat', [ObatController::class, 'index']);
 Route::post('/obat', [ObatController::class, 'store']);
 
-Route::get('/resep/{id_resep}', [ResepController::class, 'show']);
+Route::get('/resep', [ResepController::class, 'show']);
 Route::post('/resep/store', [ResepController::class, 'store']);
 Route::get('/resep/apotek', [ResepController::class, 'index']);
 

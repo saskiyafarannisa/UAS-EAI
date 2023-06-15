@@ -24,7 +24,7 @@ class ResepController extends Controller
     public function store(Request $request)
     {
         $validator = Validator::make($request -> all(), [
-            'id_dokter' => 'integer|required',
+            'nama_dokter' => 'string|required',
             'id_pasien' => 'integer|required',
             'id_pembayaran' => 'integer|required',
             'tanggal_resep' => 'date|required',

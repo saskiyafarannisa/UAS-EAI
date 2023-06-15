@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('reseps', function (Blueprint $table) {
             $table->id('id_resep');
-            $table->integer('id_dokter');
+            $table->string('nama_dokter');
             $table->integer('id_pasien');
             $table->integer('id_pembayaran');
             $table->date('tanggal_resep');

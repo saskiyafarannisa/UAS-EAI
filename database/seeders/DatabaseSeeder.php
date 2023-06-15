@@ -59,7 +59,7 @@ class DatabaseSeeder extends Seeder
         $resep = [
             [
                 'id_resep' => 1,
-                'id_dokter' => 1,
+                'nama_dokter' => 'saski',
                 'id_pasien' => 1,
                 'id_pembayaran' => 1,
                 'tanggal_resep' => Carbon::parse('2023-01-02'),
@@ -67,7 +67,7 @@ class DatabaseSeeder extends Seeder
             ],
             [
                 'id_resep' => 2,
-                'id_dokter' => 5,
+                'nama_dokter' => 'aisyah',
                 'id_pasien' => 10,
                 'id_pembayaran' => 15,
                 'tanggal_resep' => Carbon::parse('2023-01-06'),
@@ -75,7 +75,7 @@ class DatabaseSeeder extends Seeder
             ],
             [
                 'id_resep' => 3,
-                'id_dokter' => 3,
+                'nama_dokter' => 'fikri',
                 'id_pasien' => 7,
                 'id_pembayaran' => 18,
                 'tanggal_resep' => Carbon::parse('2023-01-11'),
@@ -83,7 +83,7 @@ class DatabaseSeeder extends Seeder
             ],
             [
                 'id_resep' => 4,
-                'id_dokter' => 11,
+                'nama_dokter' => 'farannisa',
                 'id_pasien' => 22,
                 'id_pembayaran' => 33,
                 'tanggal_resep' => Carbon::parse('2023-01-20'),
@@ -91,7 +91,7 @@ class DatabaseSeeder extends Seeder
             ],
             [
                 'id_resep' => 5,
-                'id_dokter' => 9,
+                'nama_dokter' => 'wulan',
                 'id_pasien' => 40,
                 'id_pembayaran' => 67,
                 'tanggal_resep' => Carbon::parse('2023-01-30'),
